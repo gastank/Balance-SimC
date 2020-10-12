@@ -23,8 +23,8 @@ jobs:
         run: python generate_by_combo.py -t 1 $APIKEY
       - name: commit changes
         run: |
-          git config user Balance-SimC
-          git config email Balance-SimC@github.com
+          git config user.name Balance-SimC
+          git config user.email Balance-SimC@github.com
           git pull --rebase --autostash
           git add .
           git commit -m "update sims"
