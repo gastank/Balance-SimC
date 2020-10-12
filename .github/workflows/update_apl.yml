@@ -31,5 +31,9 @@ jobs:
           git config user.name Balance-SimC
           git config user.email Balance-SimC@github.com
           git add .
-          git commit -m "[Balance] update APL"
+          echo "[Balance] Update APL" > commit_msg
+          echo >> commit_msg
+          git log -1 --pretty=format:%B >> commit_msg
+          git commit -F commit_msg
+          rm commit_msg
           git push
