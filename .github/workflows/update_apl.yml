@@ -31,6 +31,7 @@ jobs:
           echo >> commit_msg
           git log -1 --pretty=format:%B >> commit_msg
           echo >> commit_msg
+          echo >> commit_msg
           git log --format="Co-authored-by: %aN <%aE>" -1 >> commit_msg
           cd simc
           git config user.name Balance-SimC
