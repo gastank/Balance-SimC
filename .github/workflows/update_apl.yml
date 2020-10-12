@@ -20,7 +20,7 @@ jobs:
       - name: checkout simc
         uses: actions/checkout@v2
         with:
-          repository: simulationcraft/simc
+          repository: gastank/simc
           token: ${{ secrets.API_TOKEN_GITHUB }}
           path: './simc'
       - name: generate APL
