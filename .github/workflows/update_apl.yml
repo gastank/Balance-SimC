@@ -36,6 +36,10 @@ jobs:
           git config --global user.name $(git log -1 --format=%aN)
           git config --global user.email $(git log -1 --format=%aE)
           cd simc
-          git add .
-          git commit -F ../commit_msg
-          git push
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "no changes to apl"
+          else
+            git add .
+            git commit -F ../commit_msg
+            git push
+          fi
