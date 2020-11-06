@@ -27,8 +27,7 @@ jobs:
         run: python generate_apl.py "./simc"
       - name: commmit APL
         run: |
-          echo "[Balance] Update APL" > commit_msg
-          echo >> commit_msg
+          echo "[Balance]" > commit_msg
           git log -1 --pretty=format:"%B%ngastank/Balance-SimC@%h" >> commit_msg
           echo >> commit_msg
           echo >> commit_msg
